@@ -12,6 +12,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FTP_SERVER_VALUE: ${{ secrets.FTP_SERVER != '' && secrets.FTP_SERVER || vars.FTP_SERVER }}
+      FTP_USERNAME_VALUE: ${{ secrets.FTP_USERNAME != '' && secrets.FTP_USERNAME || vars.FTP_USERNAME }}
+      FTP_PASSWORD_VALUE: ${{ secrets.FTP_PASSWORD != '' && secrets.FTP_PASSWORD || vars.FTP_PASSWORD }}
+      FTP_PORT_VALUE: ${{ secrets.FTP_PORT != '' && secrets.FTP_PORT || vars.FTP_PORT }}
+      FTP_SERVER_DIR_VALUE: ${{ secrets.FTP_SERVER_DIR != '' && secrets.FTP_SERVER_DIR || vars.FTP_SERVER_DIR }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,13 +28,20 @@ jobs:
           cp "squads/personal-brand-design-system-squad/templates/brand-foundation-preview.html" dist/index.html
           cp "squads/personal-brand-design-system-squad/data/design-tokens.css" dist/design-tokens.css
 
+      - name: Validate FTP configuration
+        run: |
+          [ -n "${FTP_SERVER_VALUE}" ] || (echo "Missing FTP_SERVER (Secrets or Variables)" && exit 1)
+          [ -n "${FTP_USERNAME_VALUE}" ] || (echo "Missing FTP_USERNAME (Secrets or Variables)" && exit 1)
+          [ -n "${FTP_PASSWORD_VALUE}" ] || (echo "Missing FTP_PASSWORD (Secrets or Variables)" && exit 1)
+          [ -n "${FTP_PORT_VALUE}" ] || (echo "Missing FTP_PORT (Secrets or Variables)" && exit 1)
+          [ -n "${FTP_SERVER_DIR_VALUE}" ] || (echo "Missing FTP_SERVER_DIR (Secrets or Variables)" && exit 1)
+
       - name: Upload to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
+          server: ${{ env.FTP_SERVER_VALUE }}
+          username: ${{ env.FTP_USERNAME_VALUE }}
+          password: ${{ env.FTP_PASSWORD_VALUE }}
+          port: ${{ env.FTP_PORT_VALUE }}
           local-dir: dist/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-
+          server-dir: ${{ env.FTP_SERVER_DIR_VALUE }}
