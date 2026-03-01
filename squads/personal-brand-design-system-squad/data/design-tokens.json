@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "personal-brand-design-system",
+    "theme": "novo-aristocrata",
+    "version": "1.0.0"
+  },
+  "color": {
+    "bg": {
+      "base": "#F9FAFB"
+    },
+    "text": {
+      "primary": "#111729",
+      "inverse": "#F9FAFB"
+    },
+    "accent": {
+      "gold": "#D89B32"
+    },
+    "surface": {
+      "primary": "#111729",
+      "subtle": "#EEF0F4"
+    },
+    "border": {
+      "default": "#DCE0E8",
+      "strong": "#111729"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": "'Playfair Display', serif",
+      "body": "'Sora', sans-serif"
+    },
+    "fontSize": {
+      "xs": "12px",
+      "sm": "14px",
+      "md": "16px",
+      "lg": "20px",
+      "xl": "28px",
+      "xxl": "40px"
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "spacing": {
+    "2xs": "4px",
+    "xs": "8px",
+    "sm": "12px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px"
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "16px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "soft": "0 8px 24px rgba(17, 23, 41, 0.08)",
+    "focus": "0 0 0 3px rgba(216, 155, 50, 0.4)"
+  }
+}

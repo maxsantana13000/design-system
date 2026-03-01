@@ -1,0 +1,37 @@
+:root {
+  --color-bg-base: #f9fafb;
+  --color-text-primary: #111729;
+  --color-text-inverse: #f9fafb;
+  --color-accent-gold: #d89b32;
+  --color-surface-primary: #111729;
+  --color-surface-subtle: #eef0f4;
+  --color-border-default: #dce0e8;
+  --color-border-strong: #111729;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Sora", sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 40px;
+
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 8px 24px rgba(17, 23, 41, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(216, 155, 50, 0.4);
+}

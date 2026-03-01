@@ -1,0 +1,92 @@
+squad:
+  name: personal-brand-design-system-squad
+  domain: personal-brand-design-system
+  description: Squad para criar e evoluir o Design System da marca pessoal
+
+recommendations:
+  template: basic
+  config_mode: extend
+  agents:
+    - id: brand-strategist
+      role: Estrategia de marca e direcao visual
+      confidence: 0.94
+      commands:
+        - define-brand-foundation
+        - review-brand-consistency
+    - id: design-system-architect
+      role: Arquitetura do sistema de design e tokens
+      confidence: 0.96
+      commands:
+        - define-design-tokens
+        - govern-component-architecture
+    - id: ui-component-designer
+      role: Design e especificacao de componentes UI
+      confidence: 0.95
+      commands:
+        - design-core-components
+        - design-component-variants
+    - id: documentation-writer
+      role: Documentacao, guidelines e handoff
+      confidence: 0.9
+      commands:
+        - publish-guidelines
+        - write-component-specs
+    - id: qa-accessibility
+      role: Qualidade visual, funcional e acessibilidade
+      confidence: 0.93
+      commands:
+        - audit-accessibility
+        - run-ds-quality-gate
+
+  tasks:
+    - name: define-brand-foundation
+      agent: brand-strategist
+      confidence: 0.94
+      entrada:
+        - manifesto-da-marca
+        - referencias-visuais
+      saida:
+        - principios-da-marca
+        - direcao-visual-base
+    - name: define-design-tokens
+      agent: design-system-architect
+      confidence: 0.96
+      entrada:
+        - principios-da-marca
+        - direcao-visual-base
+      saida:
+        - tokens-semanticos
+        - estrategia-temas
+    - name: design-core-components
+      agent: ui-component-designer
+      confidence: 0.95
+      entrada:
+        - tokens-semanticos
+        - casos-de-uso-prioritarios
+      saida:
+        - componentes-base
+        - variantes-documentadas
+    - name: publish-guidelines
+      agent: documentation-writer
+      confidence: 0.9
+      entrada:
+        - componentes-base
+        - decisoes-de-arquitetura
+      saida:
+        - guia-de-uso
+        - pagina-de-documentacao
+    - name: audit-accessibility
+      agent: qa-accessibility
+      confidence: 0.93
+      entrada:
+        - componentes-base
+        - guidelines
+      saida:
+        - relatorio-acessibilidade
+        - plano-de-correcao
+
+metadata:
+  created_at: "2026-03-01T10:20:00Z"
+  overall_confidence: 0.94
+  source_docs:
+    - AGENTS.md

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Aristocrata - Brand Foundation Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f9fafb;
+        --ink: #111729;
+        --gold: #d89b32;
+        --line: #dce0e8;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(circle at 20% 0%, #ffffff 0%, #f4f6fa 45%, #eef1f7 100%);
+        color: var(--ink);
+        font-family: "Sora", sans-serif;
+      }
+
+      .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 48px 20px 72px;
+      }
+
+      .hero {
+        border: 1px solid var(--line);
+        background: linear-gradient(160deg, #111729 0%, #1b2749 70%, #283867 100%);
+        color: #f9fafb;
+        border-radius: 18px;
+        padding: 40px 28px;
+        box-shadow: 0 18px 50px rgba(17, 23, 41, 0.2);
+      }
+
+      .kicker {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #d89b32;
+        border: 1px solid rgba(216, 155, 50, 0.5);
+        border-radius: 999px;
+        padding: 8px 12px;
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(34px, 6vw, 62px);
+        line-height: 1.05;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 680px;
+        opacity: 0.95;
+      }
+
+      .section {
+        margin-top: 28px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        padding: 22px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+      }
+
+      .pillars {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px;
+        background: #fbfcff;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 14px;
+      }
+
+      .swatches {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .swatch {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .swatch .color {
+        height: 80px;
+      }
+
+      .swatch .meta {
+        padding: 10px 12px;
+        background: #fff;
+        font-size: 13px;
+      }
+
+      .progress {
+        display: grid;
+        gap: 8px;
+      }
+
+      .step {
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--gold);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 14px;
+        background: #fffdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <span class="kicker">Brand Direction</span>
+        <h1>Novo Aristocrata</h1>
+        <p>
+          O homem que construiu, mas se comporta como se tivesse herdado. Nao ostenta, nao explica,
+          nao pede validacao. Ele ocupa espaco.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Arquitetura Visual</h2>
+        <div class="pillars">
+          <article class="card">
+            <h3>Estrutura (Old Money)</h3>
+            <ul>
+              <li>bibliotecas, madeira, marmore discreto</li>
+              <li>simetria, couro, cortinas pesadas</li>
+              <li>iluminacao quente e pontual</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Corte Moderno (New Money)</h3>
+            <ul>
+              <li>linhas retas e espacamento respirado</li>
+              <li>tipografia limpa e enquadramento minimalista</li>
+              <li>fundo organizado e controle visual</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Disciplina Estrategica</h3>
+            <ul>
+              <li>xadrez, livros, mesa limpa</li>
+              <li>postura ereta e foco mental</li>
+              <li>narrativa de comando silencioso</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Tokens Iniciais</h2>
+        <div class="swatches">
+          <article class="swatch">
+            <div class="color" style="background:#111729;"></div>
+            <div class="meta"><strong>Night</strong><br />#111729</div>
+          </article>
+          <article class="swatch">
+            <div class="color" style="background:#F9FAFB;"></div>
+            <div class="meta"><strong>Cloud</strong><br />#F9FAFB</div>
+          </article>
+          <article class="swatch">
+            <div class="color" style="background:#D89B32;"></div>
+            <div class="meta"><strong>Heritage Gold</strong><br />#D89B32</div>
+          </article>
+        </div>
+        <p><strong>Tipografia:</strong> Playfair Display (display) + Sora (texto e interface)</p>
+      </section>
+
+      <section class="section">
+        <h2>Roadmap Visual</h2>
+        <div class="progress">
+          <div class="step">1. Foundation: manifesto, tokens e regras fotografias</div>
+          <div class="step">2. Core UI: botao, input, card, navbar, section header</div>
+          <div class="step">3. Content Blocks: hero, proof, CTA, newsletter, footer</div>
+          <div class="step">4. QA: acessibilidade, contraste e consistencia</div>
+          <div class="step">5. Publish: Storybook ou pagina de docs no seu dominio</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
